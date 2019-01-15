@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignIn should render the SignIn component 1`] = `
+<section
+  className="is-fullheight"
+>
+  <div
+    className="hero-body"
+  >
+    <div
+      className="container has-text-centered"
+    >
+      <div
+        className="column is-4 is-offset-4"
+      >
+        <h3
+          className="title has-text-grey"
+        >
+          Sign In
+        </h3>
+        <div
+          className="box"
+        >
+          <form
+            onSubmit={[Function]}
+          >
+            <Input
+              name="email"
+              onChange={[Function]}
+              placeholder="Your Email address"
+              type="text"
+            />
+            <Input
+              name="password"
+              onChange={[Function]}
+              placeholder="Your password"
+              type="password"
+            />
+            <Button
+              type="submit"
+            >
+              Sign In
+            </Button>
+          </form>
+        </div>
+        <a
+          href="/sign-up"
+        >
+          Sign Up
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+`;
