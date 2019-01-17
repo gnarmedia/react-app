@@ -3,6 +3,8 @@ import { Link, Switch, Route } from "react-router-dom";
 import Home from "../Home/Home";
 import About from "../About";
 import Contact from "../Contact";
+import ErrorNotFound from "../ErrorNotFound";
+import SignIn from "../SignIn/SignIn";
 
 const Layout = () => (
   <div>
@@ -47,10 +49,12 @@ const Layout = () => (
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons">
-              <a className="button is-primary">
+              <Link to="/sign-up" className="button is-primary">
                 <strong>Sign up</strong>
-              </a>
-              <a className="button is-light">Log in</a>
+              </Link>
+              <Link to="/sign-in" className="button is-light">
+                <strong>Sign in</strong>
+              </Link>
             </div>
           </div>
         </div>
@@ -62,6 +66,8 @@ const Layout = () => (
         <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />
         <Route path="/contact" exact component={Contact} />
+        <Route path="/sign-in" exact component={SignIn} />
+        <Route component={ErrorNotFound} />
       </Switch>
     </div>
   </div>

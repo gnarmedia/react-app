@@ -2,11 +2,11 @@
  * @file Sign In component
  */
 
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import Input from '../Input/Input'
-import Button from '../Button/Button'
-import Notification from '../Notification/Notification'
+import Input from "../Input/Input";
+import Button from "../Button/Button";
+import Notification from "../Notification/Notification";
 
 /**
  * Sign In class.
@@ -21,15 +21,15 @@ class SignIn extends Component {
    * @param {*} props - Sign In props.
    */
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      email: '',
-      password: '',
-    }
+      email: "",
+      password: ""
+    };
 
-    this.handleChangeEmail = this.handleChangeEmail.bind(this)
-    this.handleChangePassword = this.handleChangePassword.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChangeEmail = this.handleChangeEmail.bind(this);
+    this.handleChangePassword = this.handleChangePassword.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   /**
@@ -38,7 +38,7 @@ class SignIn extends Component {
    * @param {Object} event - The change event object.
    */
   handleChangeEmail(event) {
-    this.setState({ email: event.target.value })
+    this.setState({ email: event.target.value });
   }
 
   /**
@@ -47,7 +47,7 @@ class SignIn extends Component {
    * @param {Object} event - The change event object.
    */
   handleChangePassword(event) {
-    this.setState({ password: event.target.value })
+    this.setState({ password: event.target.value });
   }
 
   /**
@@ -56,40 +56,40 @@ class SignIn extends Component {
    * @param {Object} event - The submit event.
    */
   async handleSubmit(event) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const { email, password } = this.state
+    const { email, password } = this.state;
 
     const data = {
       email,
-      password,
-    }
+      password
+    };
 
     // TODO: validate sign-in form
 
     try {
-      const res = await fetch('/sign-in', {
-        method: 'POST',
+      const res = await fetch("/sign-in", {
+        method: "POST",
         // mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      })
-      const resJson = await res.json()
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+      const resJson = await res.json();
 
       if (resJson.status) {
-        if (resJson.status === 'success') {
+        if (resJson.status === "success") {
           // success
-          window.location.replace('/dashboard')
+          window.location.replace("/dashboard");
         } else {
           // error
           this.setState({
-            error: resJson.message,
-          })
+            error: resJson.message
+          });
         }
       }
     } catch (e) {
       // TODO: Add error handling
-      console.log(e)
+      console.log(e);
     }
   }
 
@@ -99,7 +99,7 @@ class SignIn extends Component {
    * @returns {Function} - React component.
    */
   render() {
-    const { error } = this.state
+    const { error } = this.state;
 
     return (
       <section className="is-fullheight">
@@ -131,8 +131,8 @@ class SignIn extends Component {
           </div>
         </div>
       </section>
-    )
+    );
   }
 }
 
-export default SignIn
+export default SignIn;

@@ -14,47 +14,24 @@ import withHtmlTemplate from "../../../src/templates/withHtmlTemplate";
 
 const router = expressPromiseRouter();
 
+function renderRoute(req, res) {
+  return Promise.try(() => {
+    const context = {};
+    return renderToString(
+      <StaticRouter context={context} location={req.url}>
+        <Layout />
+      </StaticRouter>
+    );
+  }).then(renderedString => {
+    res.send(withHtmlTemplate(renderedString));
+  });
+}
+
 // TODO: could be abstracted better perhaps...
-router.get("/", (req, res) =>
-  Promise.try(function() {
-    const context = {};
-    const jsx = (
-      <StaticRouter context={context} location={req.url}>
-        <Layout />
-      </StaticRouter>
-    );
-    return renderToString(jsx);
-  }).then(function(renderedString) {
-    res.send(withHtmlTemplate(renderedString));
-  })
-);
-
-router.get("/about", (req, res) =>
-  Promise.try(function() {
-    const context = {};
-    const jsx = (
-      <StaticRouter context={context} location={req.url}>
-        <Layout />
-      </StaticRouter>
-    );
-    return renderToString(jsx);
-  }).then(function(renderedString) {
-    res.send(withHtmlTemplate(renderedString));
-  })
-);
-
-router.get("/contact", (req, res) =>
-  Promise.try(function() {
-    const context = {};
-    const jsx = (
-      <StaticRouter context={context} location={req.url}>
-        <Layout />
-      </StaticRouter>
-    );
-    return renderToString(jsx);
-  }).then(function(renderedString) {
-    res.send(withHtmlTemplate(renderedString));
-  })
-);
+router.get("/", renderRoute);
+router.get("/about", renderRoute);
+router.get("/contact", renderRoute);
+// router.get("/sign-up", renderRoute);
+router.get("/sign-in", renderRoute);
 
 export default router;

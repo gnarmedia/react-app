@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index should render the Input component 1`] = `
+<div
+  class="field"
+>
+  <div
+    class="control"
+  >
+    <input
+      class="input is-large"
+      type="text"
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index should render the Notification component 1`] = `
+<div
+  class="notification"
+>
+  notification
+</div>
+`;
+
+exports[`index should render the Notification component for error 1`] = `
+<div
+  class="notification is-danger"
+>
+  error
+</div>
+`;
+
+exports[`index should render the Notification component for info 1`] = `
+<div
+  class="notification is-info"
+>
+  info
+</div>
+`;
+
+exports[`index should render the Notification component for success 1`] = `
+<div
+  class="notification is-success"
+>
+  success
+</div>
+`;
+
+exports[`index should render the Notification component for warning 1`] = `
+<div
+  class="notification is-warning"
+>
+  warning
+</div>
+`;
