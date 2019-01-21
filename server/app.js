@@ -2,34 +2,58 @@
  * @file App index
  */
 
-import createError from "http-errors";
-import express from "express";
 import path from "path";
+
+import express from "express";
+import httpErrors from "http-errors";
+
+import * as Promise from "bluebird";
+
+import React from "react";
+import { renderToString } from "react-dom/server";
+import { StaticRouter } from "react-router-dom";
+
+import Layout from "../src/components/Layout/Layout";
+import ErrorNotFound from "../src/components/ErrorNotFound";
+import withHtmlTemplate from "../src/templates/withHtmlTemplate";
 
 import appRoutes from "./services/app";
 
 const app = express();
-const port = 3000;
 
 app.use(express.static(path.resolve(__dirname, "../dist")));
 
-app.use(appRoutes);
-// TODO: add authentication routes
+app.use(appRoutes({ renderRoute }));
+
+/* Default 404 handler */
 app.use(function(req, res, next) {
-  next(createError.NotFound());
+  next(httpErrors.NotFound());
 });
-app.use(logErrors);
+
+/* Error handling */
 app.use(function(err, req, res, next) {
-  if (err instanceof createError.NotFound) {
-    console.log("TODO: handle 404 error");
+  if (err instanceof httpErrors.NotFound) {
+    return Promise.try(() => {
+      return renderToString(<ErrorNotFound />);
+    }).then(renderedString => {
+      res.send(withHtmlTemplate(renderedString));
+    });
   } else {
     next(err);
   }
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(3000, () => console.log(`Example app listening on port 3000!`));
 
-function logErrors(err, req, res, next) {
-  console.error(err.stack);
-  next(err);
+function renderRoute(req, res) {
+  return Promise.try(() => {
+    const context = {};
+    return renderToString(
+      <StaticRouter context={context} location={req.url}>
+        <Layout />
+      </StaticRouter>
+    );
+  }).then(renderedString => {
+    res.send(withHtmlTemplate(renderedString));
+  });
 }
