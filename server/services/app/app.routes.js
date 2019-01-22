@@ -4,16 +4,14 @@
 
 import expressPromiseRouter from "express-promise-router";
 
+import { renderView } from "../../helpers/ssr";
+
 const router = expressPromiseRouter();
 
-const routes = ({ renderRoute }) => {
-  router.get("/", renderRoute);
-  router.get("/about", renderRoute);
-  router.get("/contact", renderRoute);
-  router.get("/sign-up", renderRoute);
-  router.get("/sign-in", renderRoute);
+router.get("/", renderView);
+router.get("/about", renderView);
+router.get("/contact", renderView);
+router.get("/sign-up", renderView);
+router.get("/sign-in", renderView);
 
-  return router;
-};
-
-export default routes;
+export default router;
