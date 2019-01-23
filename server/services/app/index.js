@@ -1,3 +1,3 @@
-import router from "./app.routes";
+import routes from "./app.routes";
 
-module.exports = router;
+export default routes;
