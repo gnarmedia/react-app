@@ -1,7 +1,3 @@
-const actions = require("./authentication.actions");
-const routes = require("./authentication.routes");
-const hooks = require("./authentication.hooks");
-const models = require("./authentication.models");
+import routes from "./authentication.routes";
 
-module.exports = ({ app, bookshelf }) =>
-  routes({ app, actions, hooks, models, bookshelf });
+export default routes;
