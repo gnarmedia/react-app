@@ -1,91 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1548661651038" clover="3.2.0">
-  <project timestamp="1548661651039" name="All files">
-    <metrics statements="32" coveredstatements="32" conditionals="12" coveredconditionals="12" methods="10" coveredmethods="7" elements="54" coveredelements="51" complexity="0" loc="32" ncloc="32" packages="8" files="10" classes="10"/>
-    <package name="components">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="About.js" path="/home/adam/Projects/react-app/src/components/About.js">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-      </file>
-      <file name="Contact.js" path="/home/adam/Projects/react-app/src/components/Contact.js">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-      </file>
-      <file name="ErrorNotFound.js" path="/home/adam/Projects/react-app/src/components/ErrorNotFound.js">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="components.Button">
-      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="Button.js" path="/home/adam/Projects/react-app/src/components/Button/Button.js">
-        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="18" count="4" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="20" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="34" count="4" type="stmt"/>
-        <line num="39" count="4" type="stmt"/>
-      </file>
-    </package>
-    <package name="components.Home">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="Home.js" path="/home/adam/Projects/react-app/src/components/Home/Home.js">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="components.Input">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="Input.js" path="/home/adam/Projects/react-app/src/components/Input/Input.js">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="18" count="4" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="26" count="4" type="stmt"/>
-      </file>
-    </package>
-    <package name="components.Layout">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+<coverage generated="1548697768729" clover="3.2.0">
+  <project timestamp="1548697768729" name="All files">
+    <metrics statements="10" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2" elements="16" coveredelements="7" complexity="0" loc="10" ncloc="10" packages="2" files="2" classes="2"/>
+    <package name="Layout">
+      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="Layout.js" path="/home/adam/Projects/react-app/src/components/Layout/Layout.js">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="components.Notification">
-      <metrics statements="13" coveredstatements="13" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
-      <file name="Notification.js" path="/home/adam/Projects/react-app/src/components/Notification/Notification.js">
-        <metrics statements="13" coveredstatements="13" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="20" count="6" type="stmt"/>
-        <line num="22" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="24" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="26" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="32" count="6" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="46" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="components.SignIn">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="SignIn.js" path="/home/adam/Projects/react-app/src/components/SignIn/SignIn.js">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="23" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="components.SignUp">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+    <package name="SignUp">
+      <metrics statements="8" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="2"/>
       <file name="SignUp.js" path="/home/adam/Projects/react-app/src/components/SignUp/SignUp.js">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="8" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="2"/>
         <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
       </file>
     </package>
   </project>

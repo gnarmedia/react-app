@@ -17,6 +17,50 @@ import Button from "../Button/Button";
  */
 class SignUp extends Component {
   /**
+   * Constructor function.
+   *
+   * @param {*} props - Sign In props.
+   */
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      password: "",
+      passwordConfirm: ""
+    };
+
+    this.handleChangeEmail = this.handleChangeEmail.bind(this);
+    this.handleChangePassword = this.handleChangePassword.bind(this);
+  }
+
+  /**
+   * Handles the email change event.
+   *
+   * @param {Object} event - The change event object.
+   */
+  handleChangeEmail(event) {
+    this.setState({ email: event.target.value });
+  }
+
+  /**
+   * Handles the password change event.
+   *
+   * @param {Object} event - The change event object.
+   */
+  handleChangePassword(event) {
+    this.setState({ password: event.target.value });
+  }
+
+  /**
+   * Handles the passwordConfirm change event.
+   *
+   * @param {Object} event - The change event object.
+   */
+  handleChangePasswordConfirm(event) {
+    this.setState({ passwordConfirm: event.target.value });
+  }
+
+  /**
    * Renders component.
    *
    * @returns {Function} - React component.
@@ -31,16 +75,22 @@ class SignUp extends Component {
 
               <div className="box">
                 <form>
-                  <Input name="email" placeholder="Your Email address" />
+                  <Input
+                    name="email"
+                    placeholder="Your Email address"
+                    onChange={this.handleChangeEmail}
+                  />
                   <Input
                     name="password"
                     placeholder="Your password"
                     type="password"
+                    onChange={this.handleChangePassword}
                   />
                   <Input
                     name="passwordConfirm"
                     placeholder="Confirm password"
                     type="password"
+                    onChange={this.handleChangePasswordConfirm}
                   />
                   <Button>Sign Up</Button>
                 </form>

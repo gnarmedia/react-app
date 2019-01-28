@@ -24,16 +24,19 @@ exports[`SignUp should render the SignUp component 1`] = `
           <form>
             <Input
               name="email"
+              onChange={[Function]}
               placeholder="Your Email address"
               type="text"
             />
             <Input
               name="password"
+              onChange={[Function]}
               placeholder="Your password"
               type="password"
             />
             <Input
               name="passwordConfirm"
+              onChange={[Function]}
               placeholder="Confirm password"
               type="password"
             />
