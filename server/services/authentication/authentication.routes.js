@@ -1,13 +1,17 @@
 /**
- * @file Authentication service
+ * @file Authentication routes
  */
 
 import expressPromiseRouter from "express-promise-router";
 
 const router = expressPromiseRouter();
 
-router.post("/sign-up", (req, res) => {
-  console.log("sign up action");
-});
+const routes = ({ actions }) => {
+  const { signUp } = actions;
 
-export default router;
+  router.post("/sign-up", (req, res) => signUp(req, res));
+
+  return router;
+};
+
+export default routes;
