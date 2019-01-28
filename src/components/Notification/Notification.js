@@ -2,8 +2,8 @@
  * @file Notification component
  */
 
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
 /**
  * Renders Notification component.
@@ -17,16 +17,16 @@ import PropTypes from 'prop-types'
  * @returns {Function} Notification component.
  */
 const Notification = ({ type, isClosable, children }) => {
-  let className = 'notification'
+  let className = "notification";
 
-  if (type === 'info') {
-    className += ' is-info'
-  } else if (type === 'success') {
-    className += ' is-success'
-  } else if (type === 'warning') {
-    className += ' is-warning'
-  } else if (type === 'error') {
-    className += ' is-danger'
+  if (type === "info") {
+    className += " is-info";
+  } else if (type === "success") {
+    className += " is-success";
+  } else if (type === "warning") {
+    className += " is-warning";
+  } else if (type === "error") {
+    className += " is-danger";
   }
 
   return (
@@ -34,18 +34,18 @@ const Notification = ({ type, isClosable, children }) => {
       {isClosable && <button type="button" className="delete" />}
       {children}
     </div>
-  )
-}
+  );
+};
 
 Notification.propTypes = {
   type: PropTypes.string,
   isClosable: PropTypes.bool,
-  children: PropTypes.node.isRequired,
-}
+  children: PropTypes.node.isRequired
+};
 
 Notification.defaultProps = {
-  type: '',
-  isClosable: false,
-}
+  type: "",
+  isClosable: false
+};
 
-export default Notification
+export default Notification;

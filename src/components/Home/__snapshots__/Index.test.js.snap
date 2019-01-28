@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should render the Home component 1`] = `
+<section
+  class="hero"
+>
+  <div
+    class="hero-body"
+  >
+    <h1
+      class="title"
+    >
+      Welcome to React with serverside rendering!
+    </h1>
+    <h2
+      class="subtitle"
+    >
+      ...now to add all the other stuff...
+    </h2>
+  </div>
+</section>
+`;

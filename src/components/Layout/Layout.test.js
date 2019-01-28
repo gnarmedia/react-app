@@ -5,7 +5,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Layout from "../../templates/withHtmlTemplate";
+import Layout from "./Layout";
 
 describe("Layout", () => {
   it("should render the Layout component", () => {

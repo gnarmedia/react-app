@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SignIn should render the SignIn component 1`] = `
+exports[`SignUp should render the SignUp component 1`] = `
 <section
   className="is-fullheight"
 >
@@ -16,7 +16,7 @@ exports[`SignIn should render the SignIn component 1`] = `
         <h3
           className="title has-text-grey"
         >
-          Sign In
+          Sign Up
         </h3>
         <div
           className="box"
@@ -32,17 +32,22 @@ exports[`SignIn should render the SignIn component 1`] = `
               placeholder="Your password"
               type="password"
             />
+            <Input
+              name="passwordConfirm"
+              placeholder="Confirm password"
+              type="password"
+            />
             <Button
               type="submit"
             >
-              Sign In
+              Sign Up
             </Button>
           </form>
         </div>
         <a
-          href="/sign-up"
+          href="/sign-in"
         >
-          Sign Up
+          Sign In
         </a>
       </div>
     </div>

@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout should render the Layout component 1`] = `
+<div>
+  <nav
+    aria-label="main navigation"
+    className="navbar"
+    role="navigation"
+  >
+    <div
+      className="navbar-brand"
+    >
+      <a
+        className="navbar-item"
+        href="https://bulma.io"
+      >
+        <img
+          height="28"
+          src="https://bulma.io/images/bulma-logo.png"
+          width="112"
+        />
+      </a>
+      <a
+        aria-expanded="false"
+        aria-label="menu"
+        className="navbar-burger burger"
+        data-target="navbarBasicExample"
+        role="button"
+      >
+        <span
+          aria-hidden="true"
+        />
+        <span
+          aria-hidden="true"
+        />
+        <span
+          aria-hidden="true"
+        />
+      </a>
+    </div>
+    <div
+      className="navbar-menu"
+      id="navbarBasicExample"
+    >
+      <div
+        className="navbar-start"
+      >
+        <Link
+          className="navbar-item"
+          replace={false}
+          to="/"
+        >
+          Home
+        </Link>
+        <Link
+          className="navbar-item"
+          replace={false}
+          to="/about"
+        >
+          About
+        </Link>
+        <Link
+          className="navbar-item"
+          replace={false}
+          to="/contact"
+        >
+          Contact
+        </Link>
+      </div>
+      <div
+        className="navbar-end"
+      >
+        <div
+          className="navbar-item"
+        >
+          <div
+            className="buttons"
+          >
+            <Link
+              className="button is-primary"
+              replace={false}
+              to="/sign-up"
+            >
+              <strong>
+                Sign up
+              </strong>
+            </Link>
+            <Link
+              className="button is-light"
+              replace={false}
+              to="/sign-in"
+            >
+              <strong>
+                Sign in
+              </strong>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div
+    className="container"
+  >
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/about"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/contact"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/sign-in"
+      />
+      <Route
+        component={[Function]}
+      />
+    </Switch>
+  </div>
+</div>
+`;

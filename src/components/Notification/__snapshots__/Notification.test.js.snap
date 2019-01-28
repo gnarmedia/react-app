@@ -8,6 +8,18 @@ exports[`index should render the Notification component 1`] = `
 </div>
 `;
 
+exports[`index should render the Notification component as closable 1`] = `
+<div
+  class="notification"
+>
+  <button
+    class="delete"
+    type="button"
+  />
+  closable
+</div>
+`;
+
 exports[`index should render the Notification component for error 1`] = `
 <div
   class="notification is-danger"

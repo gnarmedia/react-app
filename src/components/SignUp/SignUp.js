@@ -1,5 +1,5 @@
 /**
- * @file Sign In component
+ * @file Sign Up component
  */
 
 import React, { Component } from "react";
@@ -8,12 +8,14 @@ import Input from "../Input/Input";
 import Button from "../Button/Button";
 
 /**
- * Sign In class.
+ * Renders SignUp component.
  *
  * @example
- * <SignIn />
+ * <SignUp />
+ *
+ * @returns {Function} SignUp component.
  */
-class SignIn extends Component {
+class SignUp extends Component {
   /**
    * Renders component.
    *
@@ -25,7 +27,7 @@ class SignIn extends Component {
         <div className="hero-body">
           <div className="container has-text-centered">
             <div className="column is-4 is-offset-4">
-              <h3 className="title has-text-grey">Sign In</h3>
+              <h3 className="title has-text-grey">Sign Up</h3>
 
               <div className="box">
                 <form>
@@ -35,11 +37,16 @@ class SignIn extends Component {
                     placeholder="Your password"
                     type="password"
                   />
-                  <Button>Sign In</Button>
+                  <Input
+                    name="passwordConfirm"
+                    placeholder="Confirm password"
+                    type="password"
+                  />
+                  <Button>Sign Up</Button>
                 </form>
               </div>
 
-              <a href="/sign-up">Sign Up</a>
+              <a href="/sign-in">Sign In</a>
             </div>
           </div>
         </div>
@@ -48,4 +55,4 @@ class SignIn extends Component {
   }
 }
 
-export default SignIn;
+export default SignUp;
