@@ -1,4 +1,5 @@
 module.exports = {
+  clearMocks: true,
   snapshotSerializers: ["enzyme-to-json/serializer"],
   coverageDirectory: "__coverage__",
   collectCoverage: true,
@@ -6,5 +7,5 @@ module.exports = {
   testPathIgnorePatterns: ["<rootDir>/build/", "<rootDir>/node_modules/"],
 
   // identify test setup file for Enzyme adapter and other needs
-  setupFiles: ["<rootDir>jest.setup.js"]
+  setupFiles: ["<rootDir>/enzyme.config.js"]
 };
